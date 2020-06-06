@@ -8,14 +8,14 @@ public class Account {
     private double balance;
     private List<Transaction> transactions;
     private double fee;
-    private int noOfTrx;
+    private int allowedTrx;
     private double minBalnce;
 
-    public Account(User user, double minBalnce, double balance, int noOfTrx) {
+    public Account(User user, double minBalnce, double balance, int allowedTrx) {
         this.user = user;
         this.minBalnce = minBalnce;
         this.balance = balance;
-        this.noOfTrx = noOfTrx;
+        this.allowedTrx = allowedTrx;
         transactions= new ArrayList<>();
     }
 
@@ -35,8 +35,8 @@ public class Account {
         return fee;
     }
 
-    public int getNoOfTrx() {
-        return noOfTrx;
+    public int getAllowedTrx() {
+        return allowedTrx;
     }
 
     public double getMinBalnce() {

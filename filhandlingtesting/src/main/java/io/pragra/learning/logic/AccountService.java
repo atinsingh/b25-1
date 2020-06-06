@@ -5,7 +5,6 @@ import io.pragra.leanring.entities.Transaction;
 import io.pragra.leanring.entities.Type;
 import io.pragra.leanring.entities.User;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -42,7 +41,7 @@ public class AccountService {
         tx.setId((int)Math.round(Math.random()*1000000));
         tx.setTransactionDate(LocalDateTime.now());
 
-        if(ac.getTransactions().size()<ac.getNoOfTrx()) {
+        if(ac.getTransactions().size()<ac.getAllowedTrx()) {
             tx.setCharge(0);
         }else {
             tx.setCharge(1);

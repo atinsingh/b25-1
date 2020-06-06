@@ -36,7 +36,7 @@ public class AccountServiceTest {
             Account account = service.getAccountByName("Karan");
 
             Assert.assertEquals(3000, account.getMinBalnce(),0.001);
-            Assert.assertEquals(10, account.getNoOfTrx());
+            Assert.assertEquals(10, account.getAllowedTrx());
     }
 
 
